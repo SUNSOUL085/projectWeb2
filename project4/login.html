@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>halaman login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#login").click(function(){
+                var user = $("#user").val();
+                var pass = $("#pass").val();
+                if(user == "iman"){
+                    if(pass == "mydesteny"){
+                        alert("login berhasil");
+                        window.location = "index.html";
+                    } else{
+                        alert("password salah");
+                    }
+                }else alert("kau botol nama pun salah")
+            })
+            $(".tai").on("click",function(){
+                location.href = "index.html";
+                console.log('botol');
+                
+
+            })
+        })
+    </script>
+</head>
+<body class="bg">
+    <div class="login-container">
+        <div class="login-box">
+            <strong class="login-title">
+                HALAMAN LOGIN
+            </strong>
+            <div class="login-form">
+                <div class="input">
+                    <label for="user">Username</label>
+                    <div class="search-box">
+                        <input type="text" class="login-input" id="user" placeholder="username">
+                    </div>
+                </div>
+                <div class="input">
+                    <label for="password">Password</label>
+                    <div class="search-box">
+                        <input type="password" class="login-input" id="pass" placeholder="password">                  
+                    </div>
+                </div>
+                <div class="login-btn">
+
+                    <input class="btn" id="login" type="submit" value="Log in">
+                    <input class="btn" id="regist" type="submit" value="Register">
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
